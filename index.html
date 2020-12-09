@@ -1,0 +1,57 @@
+<div id="app"></div>
+
+<body>
+	<h1>Memorize with MR AN</h1><br><br>
+
+	<p id="front">
+		<!-- term lives here   -->
+	</p><br>
+	<hr><br>
+	<div id="back">
+		<!-- definition lives here   -->
+	</div><br>
+	<div id="activeCardButtons">
+		<button id="prev" onclick="prevCard()">Previous Card
+  </button>
+		<button id="flip" type="button" value="Flip" onclick="flash()">
+  Flip</button>
+		<button id="next" onclick="nextCard()">Next Card
+  </button>
+	</div>
+	<br>
+	<br>
+	<br>
+	<div id="formContainer">
+		<form id="cardForm">
+			<input id="newTerm" type="text" placeholder="Add term or concept..." onKeyDown="if(event.keyCode==13) document.getElementById('newDef').focus()"><br><br>
+
+			<input id="newDef" type="text" placeholder="Add definition" onKeyDown="if(event.keyCode==13) cardAdd()">
+			<br> <br>
+
+			<input id="submit" type="button" value="Add" onClick="cardAdd()">
+			<br><br>
+
+			<input id="clearDeck" type="button" value="Clear" onClick="emptyDeck()">
+    </form>
+			<br>
+  </div>
+			<select id="selectCards" style="display:none;">
+
+</select>
+
+
+			<div id="export">
+				<a class="close" id="close" onclick="slideOut()"></a>
+				<h2 style="text-align:center;color:white;">Export</h2>
+				<p style="color:white;">Click below to save a local <code>.json</code> file containing the current deck.
+				</p>
+
+				<button id="saveDeck" onclick="download_deck()">Save</button>
+			</div>
+
+	</div>
+	<a class="activator" id="activator" onclick="slideIn()">Click Here to Save Decks of Cards</a>
+	<script type="text/javascript">
+
+	</script>
+</body>
