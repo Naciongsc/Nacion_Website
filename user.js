@@ -3,9 +3,7 @@ var bcrypt = require("bcryptjs");
 
 // mongoose.connect("mongodb://localhost:27018/nodeauth");
 mongoose.connect(
-  "mongodb+srv://wilson:asdf1234@cluster0.skgzn.mongodb.net/nodeauth2?retryWrites=true&w=majority"
-);
-
+  "mongodb+srv://MRANacion:<password>@cluster0.9rfcc.mongodb.net/<dbname>?retryWrites=true&w=majority";
 var db = mongoose.connection;
 
 // User Schema
